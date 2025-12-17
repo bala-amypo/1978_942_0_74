@@ -6,13 +6,17 @@ import Jakarta.persistance.GenerationType;
 import Jakarta.persistance.Id;
 
 @Entity
-public class stuentity{
+public class Stuentity{
     @Id
-    @GeneratedValue(stratergy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String email;
-    private float cgpa;                                     
+    private float cgpa;  
+
+    public stuentity()  {
+
+    }                                 
 
     public Long getId(){
         return id;
