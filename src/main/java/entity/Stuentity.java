@@ -1,18 +1,19 @@
 package com.example.demo.entity;
 
-import Jakarta.persistance.Entity;
-import Jakarta.persistance.GeneratedValue;
-import Jakarta.persistance.GenerationType;
-import Jakarta.persistance.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Stuentity{
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String email;
-    private float cgpa;                            
+    private float cgpa;
+
     public Long getId(){
         return id;
     }
@@ -40,11 +41,14 @@ public class Stuentity{
     public void setCgpa(float cgpa){
         this.cgpa=cgpa;
     }
-    public Stuentity(Long id, String name, String email, float cgpa){
+    public Stuentity(Long id,String name,String email,float cgpa){
         this.id=id;
         this.name=name;
         this.email=email;
         this.cgpa=cgpa;
+
     }
-    
+    public Stuentity(){
+        
+    }
 }
