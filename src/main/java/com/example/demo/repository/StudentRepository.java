@@ -1,11 +1,12 @@
-
-package com.example.PracticeProject.repository;
+package com.example.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import com.example.PracticeProject.entity.StuEnt;
+import com.example.demo.entity.Student;
 
-public interface StudentRepository extends JpaRepository<StuEnt, Long> {
-    
+@Repository
+public interface Sturepo extends JpaRepository<Student,Long>{
+
     
 }
